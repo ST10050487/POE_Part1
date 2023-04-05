@@ -10,25 +10,19 @@ namespace POE_Part1
     {
         public static void Main(string[] args)
         {
+
             //Creating an object of the Recipes class
             Recipes ric = new Recipes();
 
-            // Calling the getNameOfRecipe() method
-            ric.getNameOfRecipe();
-            // Calling the getNumberOfIngredients() method
-            ric.getNumberOfIngredients();
-            // Calling the getNameOfIngredients();
-            ric.getNameOfIngredients();
-            // Calling the getQuantity() method
-            ric.getQuantity();
-            // Calling the getUnitOfMeasurement() method
-            ric.getUnitOfMeasurement();
-            // Calling the getNumberOfSteps() method
-            ric.getNumberOfSteps();
-            // Calling the getDescription() method
-            ric.getDescription();
+            //Calling the welcomeMessage() method
+            ric.welcomeMessage();
+            //A calling the getChoice() method
+            ric.getChoice();
+            // Calling the excuteChoice() method
+            ric.excuteChoice();
 
             Console.ReadKey();
         }
+
     }
 }
