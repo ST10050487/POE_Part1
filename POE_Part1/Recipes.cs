@@ -23,6 +23,11 @@ namespace POE_Part1
         int numOfSteps = 0;
         int choice;
 
+        // Declaring constatnts
+        const double HALF = 0.5;
+        const int DOUBLE = 2;
+        const int TRIPLE = 3;
+
         //Declaring Arrays to store user input
         String[] Ingredients;
         double[] Quantity;
@@ -72,6 +77,41 @@ namespace POE_Part1
                     excuteChoice();
                     break;
                 case 2:
+                    displayRecipe();
+                    returnToMenu();
+                    Console.ReadKey();
+                    welcomeMessage();
+                    getChoice();
+                    excuteChoice();
+                    break;
+                case 3:
+                    HalfQuantity(Ingredients, Quantity, Measurement);
+                    printSteps(Steps);
+                    returnToMenu();
+                    Console.ReadKey();
+                    welcomeMessage();
+                    getChoice();
+                    excuteChoice();
+                    break;
+                case 4:
+                    DoubleQuantity(Ingredients, Quantity, Measurement);
+                    printSteps(Steps);
+                    returnToMenu();
+                    Console.ReadKey();
+                    welcomeMessage();
+                    getChoice();
+                    excuteChoice();
+                    break;
+                case 5:
+                    TripleQuantity(Ingredients, Quantity, Measurement);
+                    printSteps(Steps);
+                    returnToMenu();
+                    Console.ReadKey();
+                    welcomeMessage();
+                    getChoice();
+                    excuteChoice();
+                    break;
+                case 6:
                     displayRecipe();
                     returnToMenu();
                     Console.ReadKey();
@@ -237,6 +277,42 @@ namespace POE_Part1
             print(Ingredients, Quantity, Measurement);
             Console.WriteLine("");
             printSteps(Steps);
+        }
+        //***********************************************************NAKA****************************************************//
+        // A method to print the Halfed Quantity
+        public void HalfQuantity(String[] Name, double[] ToHalf, String[] Measure)
+        {
+            Console.WriteLine("\n\nAfter The Recipe Has Been Halfed: \n");
+            Console.WriteLine("*************************************" + nameOfRecipe + "*************************************\n");
+            Console.WriteLine("Ingredient Name \t\tQuantity \t\t Measuremnts");
+            for (int cnt = 0; cnt < Quantity.Length; cnt++)
+            {
+                Console.WriteLine("{0} \t\t\t\t{1} \t\t\t{2}", Name[cnt], (Quantity[cnt] * 0.5), Measure[cnt]);
+            }
+        }
+        //***********************************************************NAKA****************************************************//
+        // A method to print the Doubled Quantity
+        public void DoubleQuantity(String[] Name, double[] ToDouble, String[] Measure)
+        {
+            Console.WriteLine("\n\nAfter The Recipe Has Been Doubled: \n");
+            Console.WriteLine("*************************************" + nameOfRecipe + "*************************************\n");
+            Console.WriteLine("Ingredient Name \t\tQuantity \t\t Measuremnts");
+            for (int cnt = 0; cnt < Quantity.Length; cnt++)
+            {
+                Console.WriteLine("{0} \t\t\t\t{1} \t\t\t{2}", Name[cnt], (Quantity[cnt] * 2), Measure[cnt]);
+            }
+        }
+        //***********************************************************NAKA****************************************************//
+        // A method to print the Tripled Quantity
+        public void TripleQuantity(String[] Name, double[] ToTriple, String[] Measure)
+        {
+            Console.WriteLine("\n\nAfter The Recipe Has Been Tripled: \n");
+            Console.WriteLine("*************************************" + nameOfRecipe + "*************************************\n");
+            Console.WriteLine("Ingredient Name \t\tQuantity \t\t Measuremnts");
+            for (int cnt = 0; cnt < Quantity.Length; cnt++)
+            {
+                Console.WriteLine("{0} \t\t\t\t{1} \t\t\t{2}", Name[cnt], (Quantity[cnt] * 3), Measure[cnt]);
+            }
         }
         //***********************************************************NAKA****************************************************//
         // A method to return to the Menu

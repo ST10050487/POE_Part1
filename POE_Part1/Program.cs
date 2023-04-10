@@ -10,7 +10,6 @@ namespace POE_Part1
     {
         public static void Main(string[] args)
         {
-
             //Creating an object of the Recipes class
             Recipes ric = new Recipes();
 
