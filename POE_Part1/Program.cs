@@ -12,7 +12,7 @@ namespace POE_Part1
         {
             //Creating an object of the Recipes class
             Recipes ric = new Recipes();
-
+            ric.test();
             //Calling the welcomeMessage() method
             ric.welcomeMessage();
             //A calling the getChoice() method
